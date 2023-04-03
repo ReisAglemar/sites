@@ -1,0 +1,371 @@
+/*
+FONTS:
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; 700;
+        weight: 400; 700;(bold)
+
+Colors:
+    #0a48a0
+    white
+    #cc003a
+    black
+    #0a48a0;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    /*border-right: 1px dashed black;
+    border-left: 1px dashed black;*/
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.faixaTopo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    min-height: 60px;
+    background-color: #0a48a0;
+}
+
+.faixaTopo a {
+    text-decoration: none;
+}
+
+.faixaTopo img {
+    padding: 5px 0px 0px 5px;
+    max-height: 50px;
+    width: 100%;
+}
+
+.faixaTopo h3 {
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.faixaTopo h1 {
+    font-weight: bold;
+    font-style: italic;
+    padding: 10px 25px 10px 10px;
+    color: #cc003a
+}
+
+.principal {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.bg {
+    margin: 15px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 10px;
+    max-width: 650px;
+    width: 100%;
+    min-height: 500px;
+    height: auto;
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 8px 5px 5px black;
+}
+
+.salesArea {
+    margin: 15px;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+}
+
+.ticket {
+    border-top-left-radius: 48px;
+    border-bottom-right-radius: 48px;
+    border-top-right-radius: 5px;
+    margin-top: 0px;
+    border: 1px solid black;
+    box-shadow: 8px 5px 5px black;
+}
+
+.ticket legend {
+    margin: 0px auto 0px 50px;
+    color: #cc003a;
+    font-weight: bold;
+}
+
+.inputEmail {
+    padding-left: 5px;
+    width: 65%;
+    max-width: 250px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    margin-left: 50px;
+}
+
+.inputFoneNumber,
+.inputName {
+    padding-left: 5px;
+    max-width: 250px;
+    width: 65%;
+    margin: 3px 50px;
+}
+
+.inputEmail:focus,
+.inputFoneNumber:focus,
+.inputName:focus {
+    font-size: 115%;
+    color: white;
+    background-color: #0a48a0;
+    transition: font-size 0.5s;
+    border: none;
+}
+
+.gateSelect {
+    margin: 8px;
+}
+
+.radioGateA,
+.radioGateB {
+    display: none;
+}
+
+.radioGateA+label::before,
+.radioGateB+label::before {
+    content: '';
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-left: 40px;
+}
+
+.radioGateA:checked+label::before,
+.radioGateB:checked+label::before {
+    content: '';
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    border: 4px solid #0a48a0;
+    border-radius: 50%;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-left: 40px;
+}
+
+.food,
+.comments {
+    margin-top: 15px;
+    border-top-left-radius: 48px;
+    border-bottom-right-radius: 48px;
+    border-top-right-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 8px 5px 5px black;
+}
+
+.food legend {
+    margin: 0px auto 5px auto;
+    color: #cc003a;
+    font-weight: bold;
+}
+
+.titleFood {
+    margin: 5px auto 5px 50px;
+    color: #cc003a;
+}
+
+.titleDrink {
+    margin: 15px auto 5px 35px;
+    color: #cc003a;
+}
+
+.foodAndDrinkSelect {
+    margin: 0px 15px 0px 15px;
+}
+
+.foodAndDrinkSelect [type="checkbox"] {
+    display: none;
+}
+
+.foodAndDrinkSelect input+label::before {
+    content: '';
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 3px;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+}
+
+.foodAndDrinkSelect input:checked+label::before {
+    content: '';
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    border: 4px solid #0a48a0;
+    border-radius: 3px;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+}
+
+.law {
+    color: #cc003a;
+    margin: 25px 10px 10px 15px;
+}
+
+.comments legend {
+    margin: 0px 50px 5px auto;
+    color: #cc003a;
+    font-weight: bold;
+}
+
+.comments textarea {
+    margin: 0px 40px 5px 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 300px;
+    height: 80px;
+}
+
+.comments textarea:focus {
+    font-size: 115%;
+    color: white;
+    background-color: #0a48a0;
+    transition: font-size 0.5s;
+    border: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.buttonBuy,
+.buttonClear {
+    cursor: pointer;
+    background-color: #0a48a0;
+    color: white;
+    font-weight: bold;
+    padding: 5px 15px;
+    font-size: 25px;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 8px 5px 5px black;
+}
+
+.buttonBuy:active,
+.buttonClear:active {
+    background-color: #042e68;
+}
+
+.textOffer {
+    max-width: 800px;
+    width: 90%;
+    margin: 15px auto;
+    background-color: #0a48a0;
+    padding: 5px 30px 5px 15px;
+    border-top-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 8px 5px 5px black;
+}
+
+.textOffer h1 {
+    text-align: center;
+    color: white;
+    text-decoration-line: underline;
+}
+
+.textOffer p {
+    text-align: justify;
+    text-indent: 35px;
+    line-height: 25px;
+    color: white;
+}
+
+.trade {
+    text-align: center;
+    color: #cc003a;
+}
+
+.trade hr {
+    margin: 7px 0px;
+    color: #042e68;
+}
+
+.imageGallery,
+.imageGallery1 {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.stadium img,
+.gamers img {
+    cursor: pointer;
+    width: 98%;
+    max-width: 380px;
+    margin: 10px auto;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 13px 8px 8px black;
+}
+
+/*.stadium img:active,
+.gamers img:active {
+    width: 540px;   
+    transition: 0.5s;
+}*/
+
+.endGame {
+    padding: 25px;
+    margin-bottom: 25px;
+    text-align: right;
+}
+
+.howWeAre {
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 20px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.howWeAre b {
+    color: #cc003a;
+}
+
+.signature {
+    margin-top: 20px;
+}
